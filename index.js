@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname,"uploads")))
 const dbUri = process.env.URL;
 
 console.log("DB URI: ", dbUri);
-mongoose.connect(dbUri)
+mongoose.connect("mongodb+srv://gowdabharatha23:gGe3FLOnT0RkfVOR@cluster0.ijbpk.mongodb.net/fileshare?retryWrites=true&w=majority")
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => console.error("MongoDB connection error:", err));
   
