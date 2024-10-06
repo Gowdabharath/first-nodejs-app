@@ -19,7 +19,7 @@ route.get("/file/upload",(req,res)=>{
 })
 route.post("/file/upload", upload.single("file"),fileUpload)
 route.get("/file/:shortids",downloadPage)
-route.get("/file/download/:shortids",download)
+route.get("/file/download/:shortids",download);
 route.get("*",(req,res)=>{
     res.status(404).render("error", {
         error: "Sorry, the page you are looking for does not exist."
