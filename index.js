@@ -14,10 +14,10 @@ app.set("views","./views");
 app.use(express.static(path.join(__dirname,"publics")))
 app.use(express.static(path.join(__dirname,"uploads")))
 
-const dbUri = process.env.URL;
+const dbUrl = process.env.URL;
 
-console.log("DB URI: ", dbUri);
-mongoose.connect("mongodb+srv://gowdabharatha23:gGe3FLOnT0RkfVOR@cluster0.ijbpk.mongodb.net/fileshare?retryWrites=true&w=majority")
+console.log("DB URI: ", dbUrl);
+mongoose.connect(dbUrl)
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => console.error("MongoDB connection error:", err));
   
